@@ -60,8 +60,6 @@ export const getAllCountries = () =>
 
 export default class CountryPicker extends Component {
   static propTypes = {
-    showCode: PropTypes.bool,
-    showFlag: PropTypes.bool,
     cca2: PropTypes.string.isRequired,
     translation: PropTypes.string,
     onChange: PropTypes.func.isRequired,
@@ -88,8 +86,6 @@ export default class CountryPicker extends Component {
   }
 
   static defaultProps = {
-    showCode: false,
-    showFlag: true,
     translation: 'eng',
     countryList: cca2List,
     excludeCountries: [],
@@ -100,30 +96,11 @@ export default class CountryPicker extends Component {
   }
 
   static renderEmojiFlag(cca2, emojiStyle) {
-    if (this.props.showFlag && !this.props.showCode) {
-      return (
-        <Text style={[styles.emojiFlag, emojiStyle]} allowFontScaling={false}>
-          {cca2 !== '' && countries[cca2.toUpperCase()] ? (
-            <Emoji name={countries[cca2.toUpperCase()].flag} />
-          ) : null}
-        </Text>
-      )
-    } else if (!this.props.showFlag && this.props.showCode) {
-      return (
-        <Text style={[styles.emojiFlag, emojiStyle]} allowFontScaling={false}>
-          +{countries[cca2].callingCode}
-        </Text>
-      )
-    } else {
-      return (
-        <Text style={[styles.emojiFlag, emojiStyle]} allowFontScaling={false}>
-          {cca2 !== '' && countries[cca2.toUpperCase()] ? (
-            <Emoji name={countries[cca2.toUpperCase()].flag} />
-          ) : null}
-          +{countries[cca2].callingCode}
-        </Text>
-      )
-    }
+    return (
+      <Text style={[styles.emojiFlag, emojiStyle]} allowFontScaling={false}>
+        +{countries[cca2].callingCode}
+      </Text>
+    )
   }
 
   static renderImageFlag(cca2, imageStyle) {
