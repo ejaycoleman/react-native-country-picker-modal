@@ -60,6 +60,7 @@ export const getAllCountries = () =>
 
 export default class CountryPicker extends Component {
   static propTypes = {
+    text: PropTypes.bool,
     cca2: PropTypes.string.isRequired,
     translation: PropTypes.string,
     onChange: PropTypes.func.isRequired,
@@ -86,6 +87,7 @@ export default class CountryPicker extends Component {
   }
 
   static defaultProps = {
+    text: false,
     translation: 'eng',
     countryList: cca2List,
     excludeCountries: [],
@@ -379,7 +381,9 @@ export default class CountryPicker extends Component {
             <View
               style={[styles.touchFlag, { marginTop: isEmojiable ? 0 : 5 }]}
             >
-              {CountryPicker.renderFlag(this.props.cca2)}
+
+              {this.props.text? <Text>+{countries[this.props.cca2].callingCode}</Text> : CountryPicker.renderFlag(this.props.cca2)}
+              
             </View>
           )}
         </TouchableOpacity>
