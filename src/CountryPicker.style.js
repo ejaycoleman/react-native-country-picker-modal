@@ -27,7 +27,7 @@ export default StyleSheet.create({
   touchFlag: {
     alignItems: 'center',
     justifyContent: 'center',
-    height: 19
+    height: 40
   },
   imgStyle: {
     resizeMode: 'contain',
@@ -98,5 +98,8 @@ export default StyleSheet.create({
     height: 24,
     width: 24,
     resizeMode: 'contain'
+  },
+  inputText: {
+    color: 'black',
   }
 })
