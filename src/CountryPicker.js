@@ -111,7 +111,7 @@ export default class CountryPicker extends Component {
     } else if (!showFlag && showCode) {
       return (
         <Text style={[styles.emojiFlag, emojiStyle]} allowFontScaling={false}>
-          {countries[cca2].callingCode}
+          +{countries[cca2].callingCode}
         </Text>
       )
     } else {
@@ -120,7 +120,7 @@ export default class CountryPicker extends Component {
           {cca2 !== '' && countries[cca2.toUpperCase()] ? (
             <Emoji name={countries[cca2.toUpperCase()].flag} />
           ) : null}
-          {countries[cca2].callingCode}
+          +{countries[cca2].callingCode}
         </Text>
       )
     }

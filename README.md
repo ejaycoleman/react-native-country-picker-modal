@@ -201,6 +201,8 @@ const darkTheme = StyleSheet.create({
 | hideAlphabetFilter  | bool | false | If set to true, prevents the alphabet filter rendering
 | showCallingCode | bool | false | If set to true, Country Picker List will show calling code after country name `United States (+1)`
 | renderFilter  | Function | undefined | If 'filterable={true}' and renderFilter function is provided, render custom filter component.\*
+| showCode | bool | false | If set to true, phone code (eg +44) will appear 
+| showFlag | bool | true | If set to false, flag emoji will not be displayed
 
 \* 
 ```js
