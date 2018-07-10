@@ -100,7 +100,7 @@ export default class CountryPicker extends Component {
   }
 
   static renderEmojiFlag(cca2, emojiStyle) {
-    if (showFlag && !showCode) {
+    if (this.props.showFlag && !this.props.showCode) {
       return (
         <Text style={[styles.emojiFlag, emojiStyle]} allowFontScaling={false}>
           {cca2 !== '' && countries[cca2.toUpperCase()] ? (
@@ -108,7 +108,7 @@ export default class CountryPicker extends Component {
           ) : null}
         </Text>
       )
-    } else if (!showFlag && showCode) {
+    } else if (!this.props.showFlag && this.props.showCode) {
       return (
         <Text style={[styles.emojiFlag, emojiStyle]} allowFontScaling={false}>
           +{countries[cca2].callingCode}
