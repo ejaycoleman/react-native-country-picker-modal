@@ -61,6 +61,7 @@ export const getAllCountries = () =>
 export default class CountryPicker extends Component {
   static propTypes = {
     text: PropTypes.bool,
+    closeButtonLight: PropTypes.bool,
     cca2: PropTypes.string.isRequired,
     translation: PropTypes.string,
     onChange: PropTypes.func.isRequired,
@@ -87,6 +88,7 @@ export default class CountryPicker extends Component {
   }
 
   static defaultProps = {
+    closeButtonLight: false,
     text: false,
     translation: 'eng',
     countryList: cca2List,
@@ -397,6 +399,7 @@ export default class CountryPicker extends Component {
             <View style={styles.header}>
               {this.props.closeable && (
                 <CloseButton
+                  light={this.props.closeButtonLight}
                   image={this.props.closeButtonImage}
                   styles={[styles.closeButton, styles.closeButtonImage]}
                   onPress={() => this.onClose()}

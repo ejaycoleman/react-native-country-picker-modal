@@ -5,7 +5,12 @@ import { Image, TouchableOpacity, View } from 'react-native'
 import PropTypes from 'prop-types'
 
 const CloseButton = props => {
-  let closeImage = require('./ios7-close-empty.png')
+  let closeImage
+  if (props.light) {
+    closeImage = require('./ios7-close-empty-light.png')
+  } else {
+    closeImage = require('./ios7-close-empty.png')
+  }
 
   if (props.image) closeImage = props.image
 

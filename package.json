@@ -1,38 +1,38 @@
 {
-  "name": "react-native-country-picker-modal",
-  "version": "0.6.2",
-  "description": "Country picker",
-  "main": "src/CountryPicker.js",
-  "repository": {
+  "_from": "git+https://github.com/ejaycoleman/react-native-country-picker-modal.git",
+  "_id": "react-native-country-picker-modal@0.6.2",
+  "_inBundle": false,
+  "_location": "/react-native-country-picker-modal",
+  "_phantomChildren": {
+    "fbjs": "0.8.16",
+    "loose-envify": "1.3.1",
+    "object-assign": "4.1.1"
+  },
+  "_requested": {
     "type": "git",
-    "url": "git+https://github.com/xcarpentier/react-native-country-picker-modal.git"
+    "raw": "react-native-country-picker-modal@git+https://github.com/ejaycoleman/react-native-country-picker-modal.git",
+    "name": "react-native-country-picker-modal",
+    "escapedName": "react-native-country-picker-modal",
+    "rawSpec": "git+https://github.com/ejaycoleman/react-native-country-picker-modal.git",
+    "saveSpec": "git+https://github.com/ejaycoleman/react-native-country-picker-modal.git",
+    "fetchSpec": "https://github.com/ejaycoleman/react-native-country-picker-modal.git",
+    "gitCommittish": null
   },
-  "scripts": {
-    "lint": "eslint ./src",
-    "flow": "./node_modules/flow-bin/cli.js",
-    "test": "node_modules/jest/bin/jest.js",
-    "gendata": "rm -rf ./data/countries.json && babel-node ./scripts/transform-world-countries.js > ./data/countries.json",
-    "gendata-emoji": "rm -rf ./data/countries-emoji.json && babel-node ./scripts/transform-world-countries.js --emoji > ./data/countries-emoji.json",
-    "gendata-cca2": "rm -rf ./data/cca2.json && babel-node ./scripts/transform-world-countries.js --cca2 > ./data/cca2.json",
-    "bump-patch-push": "yarn version --new-version `./scripts/version_increment.js patch` && git push --follow-tags",
-    "bump-minor-push": "yarn version --new-version `./scripts/version_increment.js minor` && git push --follow-tags",
-    "bump-major-push": "yarn version --new-version `./scripts/version_increment.js major` && git push --follow-tags",
-    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
-    "cleaning": "rm -rf node_modules && rm -f yarn.lock && yarn cache clean && yarn install && watchman watch-del-all && rm -fr $TMPDIR/react-*"
-  },
-  "keywords": [
-    "react-native",
-    "components",
-    "country-picker",
-    "country",
-    "flag"
+  "_requiredBy": [
+    "/"
   ],
-  "author": "Xavier Carpentier <contact@xaviercarpentier.com> (http://xaviercarpentier.com/)",
-  "license": "MIT",
+  "_resolved": "git+https://github.com/ejaycoleman/react-native-country-picker-modal.git#bb8761b7b04b31c6ce7c730b853452baf8f07aba",
+  "_spec": "react-native-country-picker-modal@git+https://github.com/ejaycoleman/react-native-country-picker-modal.git",
+  "_where": "/Users/elliottcoleman/SplitThis/splitthis-app",
+  "author": {
+    "name": "Xavier Carpentier",
+    "email": "contact@xaviercarpentier.com",
+    "url": "http://xaviercarpentier.com/"
+  },
   "bugs": {
     "url": "https://github.com/xcarpentier/react-native-country-picker-modal/issues"
   },
-  "homepage": "https://github.com/xcarpentier/react-native-country-picker-modal#readme",
+  "bundleDependencies": false,
   "dependencies": {
     "fuse.js": "2.6.2",
     "lodash": "4.12.0",
@@ -41,6 +41,8 @@
     "react-native-safe-area-view": "^0.7.0",
     "world-countries": "1.8.0"
   },
+  "deprecated": false,
+  "description": "Country picker",
   "devDependencies": {
     "@types/react": "^16.4.6",
     "@types/react-native": "^0.55.26",
@@ -64,10 +66,39 @@
     "regenerator-runtime": "0.11.1",
     "typescript": "^2.9.2"
   },
+  "homepage": "https://github.com/xcarpentier/react-native-country-picker-modal#readme",
   "jest": {
     "preset": "react-native",
     "modulePathIgnorePatterns": [
       "<rootDir>/example/"
     ]
-  }
+  },
+  "keywords": [
+    "react-native",
+    "components",
+    "country-picker",
+    "country",
+    "flag"
+  ],
+  "license": "MIT",
+  "main": "src/CountryPicker.js",
+  "name": "react-native-country-picker-modal",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xcarpentier/react-native-country-picker-modal.git"
+  },
+  "scripts": {
+    "bump-major-push": "yarn version --new-version `./scripts/version_increment.js major` && git push --follow-tags",
+    "bump-minor-push": "yarn version --new-version `./scripts/version_increment.js minor` && git push --follow-tags",
+    "bump-patch-push": "yarn version --new-version `./scripts/version_increment.js patch` && git push --follow-tags",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+    "cleaning": "rm -rf node_modules && rm -f yarn.lock && yarn cache clean && yarn install && watchman watch-del-all && rm -fr $TMPDIR/react-*",
+    "flow": "./node_modules/flow-bin/cli.js",
+    "gendata": "rm -rf ./data/countries.json && babel-node ./scripts/transform-world-countries.js > ./data/countries.json",
+    "gendata-cca2": "rm -rf ./data/cca2.json && babel-node ./scripts/transform-world-countries.js --cca2 > ./data/cca2.json",
+    "gendata-emoji": "rm -rf ./data/countries-emoji.json && babel-node ./scripts/transform-world-countries.js --emoji > ./data/countries-emoji.json",
+    "lint": "eslint ./src",
+    "test": "node_modules/jest/bin/jest.js"
+  },
+  "version": "0.6.2"
 }

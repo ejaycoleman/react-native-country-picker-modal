@@ -5,7 +5,12 @@ import { Image, TouchableNativeFeedback, View, Platform } from 'react-native'
 import PropTypes from 'prop-types'
 
 const CloseButton = props => {
-  let closeImage = require('./android-close.png')
+  let closeImage
+  if (props.light) {
+    closeImage = require('./android-close-light.png')
+  } else {
+    closeImage = require('./android-close.png')
+  }
 
   if (props.image) closeImage = props.image
 

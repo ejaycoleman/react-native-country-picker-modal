@@ -202,6 +202,7 @@ const darkTheme = StyleSheet.create({
 | showCallingCode | bool | false | If set to true, Country Picker List will show calling code after country name `United States (+1)`
 | renderFilter  | Function | undefined | If 'filterable={true}' and renderFilter function is provided, render custom filter component.\*
 | text | bool | false | If set to true, phone code (eg +44) will appear and flag will be removed (on button)
+| closeButtonLight | bool | false | If set to true, the close button will be white instead of black
 
 \* 
 ```js
